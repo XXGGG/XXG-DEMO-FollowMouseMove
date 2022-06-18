@@ -11,7 +11,7 @@ css样式自己定，长宽都100px 然后给个颜色！
 ```
 ![image.png](./MarkDown/1.png)
 ## 🟧2、监听鼠标的移动！
-```vue
+```html
 //vue3中
 <script setup lang="ts">
   const move = (e:any) =>{
@@ -43,7 +43,7 @@ onMounted(() => { //当div加载完以后再去得到dom元素👇
 ```
 ![image.png](./MarkDown/3.png)
 ## 🟩4、【鼠标点击后】物体跟随鼠标移动！
-```vue
+```html
 <template>
   <div id="box" class="box btf" @mousedown="mousedown" @mouseup="mouseup"></div>
 </template>
@@ -82,7 +82,7 @@ onMounted(() => { //当div加载完以后再去得到dom元素👇
 ## 🟦优化👇
 #### 1、鼠标左键才可以移动 `@mousedown.left="mousedown" `
 #### 2、【event.target】触发该事件的 DOM 元素。👇
-```vue
+```html
 <template>
   <div id="box" class="box btf" @mousedown.left="mousedown" @mouseup="mouseup"></div>
 </template>
@@ -110,7 +110,7 @@ console.log('xxg')
 </script>
 ```
 #### 3、定位鼠标在方块点击处【layerX】【layerY】
-```vue
+```html
 <template>
 <div id="box" class="box btf" @mousedown.left="mousedown" @mouseup="mouseup"></div>
 </template>
@@ -141,7 +141,7 @@ console.log('xxg')
 #### 4、改变光标👇
 [https://www.w3school.com.cn/tiy/t.asp?f=eg_csse_cursor](https://www.w3school.com.cn/tiy/t.asp?f=eg_csse_cursor)
 #### 5、当移动到边界~
-```vue
+```html
 <script setup lang="ts">
 
 let move: any = null
@@ -187,7 +187,7 @@ const mouseup = () => {  //松开鼠标的时候 取消监听
 ![4.gif](./MarkDown/4.gif)
 #### 6、还有一个问题!
 当鼠标移出了浏览器窗口后【再回来】无法触发【取消监听】这个方块就会一直粘着鼠标....👇在外框加一个移出【@mouseleave】也就是原生JavaScript里的【onmouseleave()】
-```vue
+```html
 <template>
 <div class="area" @mouseleave="mouseleave">
 	<h1>移动这个小方块！</h1>
@@ -196,7 +196,7 @@ const mouseup = () => {  //松开鼠标的时候 取消监听
 	</div>
 </template>
 ```
-```vue
+```html
 <script setup lang="ts">
 //...刚刚前面写的那些！
 
@@ -227,3 +227,6 @@ window.onresize = function () {
 }
 ```
 ## 🟪【END】
+关于我：https://github.com/XXGGG  
+项目地址：https://github.com/XXGGG/XG-DEMO-FollowMouseMove  
+演示网址：https://xxggg.github.io/XG-DEMO-FollowMouseMove/  
